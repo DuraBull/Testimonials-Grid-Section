@@ -1,16 +1,18 @@
 .grid
+    max-width: 1100px
     display: grid
     grid-template-columns: repeat(4, 1fr)
     grid-auto-flow: dense
     gap: 2em
 
 .card
-    background: blue
     display: flex
     flex-direction: column
+    align-content: space-between
     gap: 1.4em
     border-radius: 10px
-    padding: 2.15em
+    padding: 1.85em 2.54em
+    box-shadow: 0 5px 20px $light-gray
 .graduate
     display: flex
     flex-direction: row
@@ -21,31 +23,53 @@
         width: 30px
         height: 30px
         border-radius: 50%
+    .name
+        display: flex
+        flex-direction: column
+        gap: .2em
     .grad-name
         font-size: 1em
+        font-weight: $font-medium
     .verified
-        font-size: .9em
+        font-weight: $font-medium
+        font-size: .85em
+        opacity: 50%
 
-.quote       
-    .quote-header
-        font-size: 1.5em
-        line-height: 1.24em
-        padding-bottom: .8em
-    .quote-main
-        line-height: 1.38em
-
-
+.quote-header
+    font-weight: $font-semibold
+    font-size: .75em
+    line-height: 2.5em
+.quote-main
+    font-size: 1em
+    font-weight: $font-medium
+    line-height: 1.4em
+    opacity: 70%
 
 .daniel
     grid-column: 1 / span 2
+    background: $moderate-violet url("../images/bg-pattern-quotation.svg") no-repeat
+    background-position: 80% 0
+    color: $white
+    img
+        border: 2px solid lighten($moderate-violet, 20%)
 
 .jonathan
+    background: $dark-grayish-blue
+    color: $white
 
 .jeanette
+    background: $white
+    color: $dark-grayish-blue
 
 .patrick
     grid-column: 2 / span 2
+    background: $dark-blackish-blue
+    color: $white
+    img
+        border: 2px solid $moderate-violet
 
 .kira
     grid-column: 4
     grid-row: 1 / span 2
+    background: $white
+    color: $dark-grayish-blue
